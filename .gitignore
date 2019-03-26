@@ -1,0 +1,11 @@
+# NodeJS
+node_modules/
+
+# Sass
+.sass-cache/
+*.css.map
+*.scss.map
+*.sass.map
+
+# JetBrains
+.idea/

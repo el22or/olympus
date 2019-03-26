@@ -1,0 +1,57 @@
+// Layout variables.
+$layout-sidebar-width:         80px;
+$layout-sidebar-tablet-width:  60px;
+$layout-topbar-height:         90px;
+$layout-topbar-tablet-height:  70px;
+$layout-subnav-height:         90px;
+$layout-subnav-tablet-height:  50px;
+$layout-subnav-width:          307px;
+
+// Breakpoints.
+$breakpoints: (
+  'l': 1200px,
+  'm':  960px,
+  's':  760px,
+  'xs': 700px,
+);
+
+// Media Queries.
+$mq: (
+  'above-wide':   '(min-width: #{map_get($breakpoints, l)})',
+  'below-wide':   '(max-width: #{map_get($breakpoints, l) - 1})',
+  'above-normal': '(min-width: #{map_get($breakpoints, m)})',
+  'below-normal': '(max-width: #{map_get($breakpoints, m) - 1})',
+  'above-narrow': '(min-width: #{map_get($breakpoints, s)})',
+  'below-narrow': '(max-width: #{map_get($breakpoints, s) - 1})',
+);
+
+$mq-above-wide:   map_get($mq, 'above-wide');
+$mq-below-wide:   map_get($mq, 'below-wide');
+$mq-above-normal: map_get($mq, 'above-normal');
+$mq-below-normal: map_get($mq, 'below-normal');
+$mq-above-narrow: map_get($mq, 'above-narrow');
+$mq-below-narrow: map_get($mq, 'below-narrow');
+
+$spaces: (
+  'xxs':      5px,
+  'xs':      10px,
+  's':       15px,
+  'm':       20px,
+  'l':       30px,
+  'xl':      40px,
+  'xxl':     50px,
+  'xxxl':    80px,
+  'xxxxl':  100px,
+  'xxxxxl': 150px,
+);
+
+$space-xxs:    map_get($spaces, 'xxs');
+$space-xs:     map_get($spaces, 'xs');
+$space-s:      map_get($spaces, 's');
+$space-m:      map_get($spaces, 'm');
+$space-l:      map_get($spaces, 'l');
+$space-xl:     map_get($spaces, 'xl');
+$space-xxl:    map_get($spaces, 'xxl');
+$space-xxxl:   map_get($spaces, 'xxxl');
+$space-xxxxl:  map_get($spaces, 'xxxxl');
+$space-xxxxxl: map_get($spaces, 'xxxxxl');

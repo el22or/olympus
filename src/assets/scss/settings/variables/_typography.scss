@@ -1,0 +1,38 @@
+// Typography variables.
+
+// Font families.
+$font-family-base: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Font sizes.
+$font-sizes: (
+  'base':  1rem,      // 16px
+  'xxs':   0.8125rem, // 13px
+  'xs':    0.875rem,  // 14px
+  's':     0.9375rem, // 15px
+  'm':     1.063rem,  // 17px
+  'l':     1.125rem,  // 18px
+  'xl':    1.25rem,   // 20px
+  'xxl':   1.375rem,  // 22px
+  'xxxl':  1.563rem,  // 25px
+);
+
+$font-size-base: map_get($font-sizes, 'base');
+$font-size-xxs:  map_get($font-sizes, 'xxs');
+$font-size-xs:   map_get($font-sizes, 'xs');
+$font-size-s:    map_get($font-sizes, 's');
+$font-size-m:    map_get($font-sizes, 'm');
+$font-size-l:    map_get($font-sizes, 'l');
+$font-size-xl:   map_get($font-sizes, 'xl');
+$font-size-xxl:  map_get($font-sizes, 'xxl');
+$font-size-xxxl: map_get($font-sizes, 'xxxl');
+
+// Font weight.
+$font-weight-light:  300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold:   700;
+
+// Line height.
+$line-height-base: 1.5;
+$line-height-none: 0;
+$line-height-single-line: 1;

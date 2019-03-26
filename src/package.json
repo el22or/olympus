@@ -1,0 +1,21 @@
+{
+  "name": "Olympus",
+  "version": "1.0.0",
+  "description": "Olympus tools.",
+  "main": "index.js",
+  "author": "Dragan Eror",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2"
+  },
+  "scripts": {
+    "build": "yarn run build:sass && yarn build:css",
+    "build:css": "yarn run postcss-cli ./assets/css/**/*.css --base --dir ../assets/css --use autoprefixer --map",
+    "build:sass": "yarn run node-sass ./assets/scss -o ./assets/css --output-style expanded --source-map true --include-path=./assets/scss",
+    "node-sass": "./node_modules/node-sass/bin/node-sass",
+    "postcss-cli": "./node_modules/postcss-cli/bin/postcss"
+  }
+}
