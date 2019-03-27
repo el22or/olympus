@@ -1,0 +1,96 @@
+// Page component.
+$__c-page-max-width: $layout-site-max-width;
+$__c-page-topbar-height: $layout-topbar-height;
+$__c-page-sidebar-first-width-narrow: 0;
+$__c-page-sidebar-second-width-narrow: 0;
+$__c-page-sidebar-first-width-normal: $layout-sidebar-first-width;
+$__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
+
+.c-page {
+  background-color: #f00;
+  
+  display: grid;
+  height: 100%
+}
+
+// Narrow
+@media #{$mq-below-normal} {
+  .c-page\@narrow {
+    grid-template-areas:
+      "page-topbar"
+      "page-main";
+    grid-template-columns: [full-start page-main-start] auto [page-main-end full-end];
+    grid-template-rows: [full-start page-topbar-start] $__c-page-topbar-height [page-topbar-end page-main-start] calc(100% - #{$__c-page-topbar-height}) [page-main-end full-end];
+  }
+}
+
+// Normal
+@media #{$mq-above-normal} {
+  .c-page\@normal {
+    grid-template-areas:
+      "page-topbar page-topbar page-topbar"
+      "page-sidebar-first page-main page-sidebar-second";
+    grid-template-columns: [full-start page-sidebar-first-start] $__c-page-sidebar-first-width-normal [page-sidebar-first-end page-main-start] auto [page-main-end page-sidebar-second-start] $__c-page-sidebar-second-width-normal [page-sidebar-second-end full-end];
+    grid-template-rows: [full-start page-topbar-start] $__c-page-topbar-height [page-topbar-end page-main-start] calc(100% - #{$__c-page-topbar-height}) [page-main-end full-end];
+  }
+}
+
+//
+// Main
+//
+
+.c-page__main {
+  grid-area: page-main;
+}
+
+//
+// Topbar
+//
+
+.c-page__topbar {
+  grid-area: page-topbar;
+}
+
+//
+// Sidebar first
+//
+
+.c-page__sidebar-first {}
+
+// Narrow
+@media #{$mq-below-normal} {
+  .c-page__sidebar-first\@narrow {
+    display: none;
+  }
+}
+
+// Normal
+@media #{$mq-above-normal} {
+  .c-page__sidebar-first\@normal {
+    grid-area: page-sidebar-first;
+  }
+}
+
+//
+// Sidebar second
+//
+
+.c-page__sidebar-second {}
+
+// Narrow
+@media #{$mq-below-normal} {
+  .c-page__sidebar-second\@narrow {
+    display: none;
+  }
+}
+
+// Normal
+@media #{$mq-above-normal} {
+  .c-page__sidebar-second\@normal {
+    grid-area: page-sidebar-second;
+  }
+}
+
+[class*="sidebar"] {
+  overflow: hidden;
+}

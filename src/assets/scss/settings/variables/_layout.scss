@@ -9,10 +9,9 @@ $layout-subnav-width:          307px;
 
 // Breakpoints.
 $breakpoints: (
-  'l': 1200px,
+  'l': 1300px,
   'm':  960px,
   's':  760px,
-  'xs': 700px,
 );
 
 // Media Queries.
@@ -55,3 +54,9 @@ $space-xxl:    map_get($spaces, 'xxl');
 $space-xxxl:   map_get($spaces, 'xxxl');
 $space-xxxxl:  map_get($spaces, 'xxxxl');
 $space-xxxxxl: map_get($spaces, 'xxxxxl');
+
+$layout-site-max-width: 1300px;
+
+$layout-topbar-height:        50px;
+$layout-sidebar-first-width:  50px;
+$layout-sidebar-second-width: 50px;
