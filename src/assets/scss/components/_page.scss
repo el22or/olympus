@@ -1,16 +1,16 @@
 // Page component.
-$__c-page-max-width: $layout-site-max-width;
 $__c-page-topbar-height: $layout-topbar-height;
+$__c-page-sidebar-first-top-distance: $__c-page-topbar-height;
+$__c-page-sidebar-second-top-distance: $__c-page-topbar-height;
 $__c-page-sidebar-first-width-narrow: 0;
 $__c-page-sidebar-second-width-narrow: 0;
 $__c-page-sidebar-first-width-normal: $layout-sidebar-first-width;
 $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
 
 .c-page {
-  background-color: #f00;
-  
   display: grid;
-  height: 100%
+  height: 100%;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
 // Narrow
@@ -41,6 +41,7 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
 
 .c-page__main {
   grid-area: page-main;
+  height: 100%;
 }
 
 //
@@ -49,6 +50,11 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
 
 .c-page__topbar {
   grid-area: page-topbar;
+  height: $__c-page-topbar-height;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 //
@@ -68,6 +74,9 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
 @media #{$mq-above-normal} {
   .c-page__sidebar-first\@normal {
     grid-area: page-sidebar-first;
+    left: 0;
+    top: $__c-page-sidebar-first-top-distance;
+    width: $__c-page-sidebar-first-width-normal;
   }
 }
 
@@ -88,9 +97,13 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
 @media #{$mq-above-normal} {
   .c-page__sidebar-second\@normal {
     grid-area: page-sidebar-second;
+    right: 0;
+    top: $__c-page-sidebar-second-top-distance;
+    width: $__c-page-sidebar-second-width-normal;
   }
 }
 
-[class*="sidebar"] {
+[class*="c-page__sidebar"][class*="\@normal"] {
   overflow: hidden;
+  position: fixed;
 }
