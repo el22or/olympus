@@ -103,8 +103,6 @@ abbr[title] {
 .c-page {
   display: grid;
   height: 100%;
-  grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
-  grid-auto-rows: minmax(min-content, max-content);
 }
 
 @media (max-width: 959px) {

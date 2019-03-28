@@ -100,7 +100,6 @@ abbr[title] {
 .c-page {
   display: grid;
   height: 100%;
-  grid-auto-rows: minmax(min-content, max-content);
 }
 
 @media (max-width: 959px) {
