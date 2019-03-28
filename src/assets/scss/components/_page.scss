@@ -10,7 +10,6 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
 .c-page {
   display: grid;
   height: 100%;
-  grid-auto-rows: minmax(min-content, max-content);
 }
 
 // Narrow
