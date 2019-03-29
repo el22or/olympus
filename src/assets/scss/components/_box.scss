@@ -1,0 +1,33 @@
+// Box component.
+$__c-box-title-border: solid $border-width-default rgba(0, 0, 0, 0.5);
+$__c-box-padding-x: 10px;
+$__c-box-title-padding-y: 5px;
+$__c-box-content-padding-y: 5px;
+
+.c-box {
+  background-color: #aaa;
+
+  & + &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.c-box__title {
+  border-bottom: $__c-box-title-border;
+  margin: 0;
+  padding: {
+    bottom: $__c-box-title-padding-y;
+    left: $__c-box-padding-x;
+    right: $__c-box-padding-x;
+    top: $__c-box-title-padding-y;
+  }
+}
+
+.c-box__content {
+  padding: {
+    bottom: $__c-box-content-padding-y;
+    left: $__c-box-padding-x;
+    right: $__c-box-padding-x;
+    top: $__c-box-content-padding-y;
+  }
+}
