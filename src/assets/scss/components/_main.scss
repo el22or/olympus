@@ -2,8 +2,64 @@
 $__c-main-max-width: $layout-site-max-width;
 
 .c-main {
+  display: grid;
+  grid-gap: 20px;
   max-width: $__c-main-max-width;
   width: 100%;
+
+  // Small
+  @media #{$mq-below-narrow} {
+    grid-template-areas:
+      "main-header"
+      "main-content"
+      "main-sidebar-first"
+      "main-sidebar-second";
+    grid-template-columns: [full-start main-header-start main-content-start main-sidebar-first-start main-sidebar-second-start] auto [main-sidebar-first-end main-sidebar-second-end main-content-end main-header-end full-end];
+    grid-template-rows: [full-start main-header-start] auto [main-header-end main-content-start] auto [main-content-end main-sidebar-first-start] auto [main-sidebar-first-end main-sidebar-second-start] auto [main-sidebar-second-end full-end];
+  }
+
+  // Narrow
+  @media #{$mq-above-narrow} and #{$mq-below-normal} {
+    grid-template-areas:
+      "main-header main-header"
+      "main-content main-content"
+      "main-sidebar-first main-sidebar-second";
+    grid-template-columns: [full-start main-header-start main-content-start main-sidebar-first-start] 1fr [main-sidebar-first-end main-sidebar-second-start] 1fr [main-sidebar-second-end main-content-end main-header-end full-end];
+    grid-template-rows: [full-start main-header-start] auto [main-header-end main-content-start] auto [main-content-end main-sidebar-first-start main-sidebar-second-start] auto [main-sidebar-first-end main-sidebar-second-end full-end];
+  }
+
+  // Normal
+  @media #{$mq-above-normal} {
+    grid-template-areas:
+      "main-header main-header main-header"
+      "main-sidebar-first main-content main-sidebar-second";
+    grid-template-columns: [full-start main-sidebar-first-start main-header-start] 200px [main-sidebar-first-end main-content-start] auto [main-content-end main-sidebar-second-start] 200px [main-sidebar-second-end main-header-end full-end];
+    //// grid-template-columns: [full-start main-sidebar-first-start] 200px [main-sidebar-first-end main-content-start] auto [main-content-end main-sidebar-second-start] 200px [main-sidebar-second-end full-end];
+    grid-template-rows: [full-start main-header-start] auto [main-header-end main-content-start main-sidebar-first-start main-sidebar-second-start] auto [main-sidebar-first-end main-sidebar-second-end main-content-end full-end];
+    //// grid-template-rows: [full-start main-header-start] auto [main-header-end main-content-start] auto [main-content-end full-end];
+  }
 }
 
-.c-main__wrapper {}
+.c-main__wrapper {
+  margin: {
+    left: 15px;
+    right: 15px;
+    top: 30px;
+  }
+}
+
+.c-main__header {
+  grid-area: main-header;
+}
+
+.c-main__content {
+  grid-area: main-content;
+}
+
+.c-main__sidebar-first {
+  grid-area: main-sidebar-first;
+}
+
+.c-main__sidebar-second {
+  grid-area: main-sidebar-second;
+}

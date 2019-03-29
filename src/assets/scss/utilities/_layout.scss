@@ -9,3 +9,19 @@
 .u-very-high-content {
   height: 2000px;
 }
+
+.u-position-relative {
+  position: relative;
+}
+
+@media #{$mq-below-normal} {
+  .u-position-relative\@narrow {
+    position: relative;
+  }
+}
+
+@media #{$mq-above-normal} {
+  .u-position-relative\@normal {
+    position: relative;
+  }
+}
