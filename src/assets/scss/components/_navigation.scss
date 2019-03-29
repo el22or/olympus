@@ -1,0 +1,24 @@
+// Navigation component.
+.c-navigation {}
+
+.c-navigation__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.c-navigation__list-item {
+  padding: {
+    bottom: 30px;
+    top: 30px;
+  }
+}
+
+@media #{$mq-below-normal} {
+  .c-navigation__list-item--last\@narrow {
+    order: 1;
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+// Cover component.
+.c-cover {}
+
+.c-cover__media {
+  padding-bottom: calc(100% / 3);
+}
+
+.c-cover__action-buttons {}
+
+.c-cover__action-buttons-list {
+  height: 0;
+  margin: {
+    left: 20px;
+    right: 20px;
+  }
+
+  @media #{$mq-below-normal} {
+    text-align: center;
+  }
+
+  @media #{$mq-above-normal} {
+    text-align: right;
+  }
+}
+
+.c-cover__action-buttons-list-item {
+  display: inline-block;
+  margin: {
+    left: 20px;
+    right: 20px;
+  }
+  transform: translateY(-50%);
+}
