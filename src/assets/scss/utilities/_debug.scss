@@ -1,3 +1,6 @@
+$__u-rounded-corners-border-radius: $border-radius-default;
+$__u-bordered-border-width: $border-width-default;
+
 .u-debug-bg-0 {
   background-color: hsla(0, 100%, 50%, 0.5);
 }
@@ -12,4 +15,30 @@
 
 .u-debug-bg-3 {
   background-color: hsla(300, 100%, 50%, 0.5);
+}
+
+@media #{$mq-above-normal} {
+  .u-debug-user-image\@normal {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -65%);
+  }
+}
+
+@media #{$mq-above-normal} {
+  .u-debug-user-location\@normal {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -25%);
+  }
+}
+
+.u-rounded-corners {
+  border-radius: $__u-rounded-corners-border-radius;
+}
+
+.u-bordered {
+  border: solid $__u-bordered-border-width rgba(0, 0, 0, 0.5);
 }
