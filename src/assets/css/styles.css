@@ -92,10 +92,6 @@ abbr[title] {
   text-decoration: none;
 }
 
-.c-box {
-  background-color: #aaa;
-}
-
 .c-box + .c-box:not(:first-child) {
   margin-top: 20px;
 }

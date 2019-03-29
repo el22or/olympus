@@ -5,8 +5,6 @@ $__c-box-title-padding-y: 5px;
 $__c-box-content-padding-y: 5px;
 
 .c-box {
-  background-color: #aaa;
-
   & + &:not(:first-child) {
     margin-top: 20px;
   }
