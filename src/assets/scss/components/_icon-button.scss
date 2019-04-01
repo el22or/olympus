@@ -1,0 +1,11 @@
+.c-icon-button {
+  //
+  &::before {
+    background-color: #f00;
+    content: "";
+    display: block;
+
+    height: 50px;
+    width: 50px;
+  }
+}

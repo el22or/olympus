@@ -1,0 +1,41 @@
+// Post component.
+.c-post {
+  padding: 20px;
+  position: relative;
+}
+
+.c-post__navigation {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media #{$mq-below-normal} {
+    transform: translateY(-50%);
+  }
+
+  @media #{$mq-above-normal} {
+    transform: translateX(50%);
+  }
+}
+
+.c-post__navigation-list {
+  display: flex;
+  
+  @media #{$mq-below-normal} {
+    flex: {
+      direction: row;
+    }
+  }
+
+  @media #{$mq-above-normal} {
+    flex: {
+      direction: column;
+    }
+  }
+}
+
+.c-post__navigation-list-item {}
+
+.c-post__footer {
+  border-top: solid 1px #f00;
+}
