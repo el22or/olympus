@@ -1,0 +1,16 @@
+// Background colors utility classes.
+[class*="u-bg"] {
+  &:not([class*="u-bg-"]) {
+    --bg-h: 0;
+  }
+  --bg-s: 70%;
+  --bg-l: 70%;
+  --bg-a: 1;
+  background-color: hsla(var(--bg-h), var(--bg-s), var(--bg-l), var(--bg-a));
+}
+
+@for $i from 1 through 10 {
+  .u-bg-#{$i} {
+    --bg-h: #{$i * 36};
+  }
+}
