@@ -145,43 +145,8 @@ abbr[title] {
           transform: translateY(-50%);
 }
 
-.c-icon-button {
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.c-icon-button::before {
-  background-color: #f00;
-  content: "";
-  display: block;
-  height: 50px;
-  width: 50px;
-}
-
-.c-icon-button__label--position-left {
-  margin-right: 20px;
-}
-
-.c-icon-button__label--position-right {
-  margin-left: 20px;
-}
-
-.c-icon-button__badge {
-  background-color: #0ff;
-  position: absolute;
-}
-
-.c-icon-button__badge--position-top-right {
-  top: 0;
-  right: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .c-icon {
   background-color: rgba(255, 0, 255, 0.5);
-  border-radius: 50%;
   align-items: center;
   display: flex;
   height: 50px;
@@ -190,9 +155,15 @@ abbr[title] {
   width: 50px;
 }
 
+.c-icon--rounded {
+  border-radius: 50%;
+}
+
+.c-icon--rounded {
+  border-radius: 50%;
+}
+
 .c-icon__badge {
-  --position-x: 0;
-  --position-y: 0;
   align-items: center;
   background-color: rgba(255, 255, 0, 0.5);
   border-radius: 50%;
@@ -205,11 +176,17 @@ abbr[title] {
   width: var(--size, 25px);
 }
 
-.c-icon__badge:not([class*="--size"]) {
+.c-icon__badge:not([class*="--size-"]) {
   --size: 25px;
 }
 
+.c-icon__badge--size-s {
+  --size: 20px;
+}
+
 .c-icon__badge[class*="--position"] {
+  --position-x: 0;
+  --position-y: 0;
   -webkit-transform: translate(var(--position-x), var(--position-y));
           transform: translate(var(--position-x), var(--position-y));
 }
@@ -234,8 +211,14 @@ abbr[title] {
   bottom: 0;
 }
 
-.c-icon__badge--size-s {
-  --size: 20px;
+.c-icon-button {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.c-icon-button--rounded {
+  border-radius: 50%;
 }
 
 .c-main {
@@ -356,6 +339,7 @@ abbr[title] {
   .c-page__sidebar-first {
     grid-area: page-sidebar-first;
     left: 0;
+    position: fixed;
     top: 50px;
     width: 50px;
   }
@@ -370,6 +354,7 @@ abbr[title] {
 @media (min-width: 960px) {
   .c-page__sidebar-second {
     grid-area: page-sidebar-second;
+    position: fixed;
     right: 0;
     top: 50px;
     width: 50px;
