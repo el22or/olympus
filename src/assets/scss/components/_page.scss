@@ -66,6 +66,7 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
   @media #{$mq-above-normal} {
     grid-area: page-sidebar-first;
     left: 0;
+    position: fixed;
     top: $__c-page-sidebar-first-top-distance;
     width: $__c-page-sidebar-first-width-normal;
   }
@@ -84,6 +85,7 @@ $__c-page-sidebar-second-width-normal: $layout-sidebar-second-width;
   // Normal
   @media #{$mq-above-normal} {
     grid-area: page-sidebar-second;
+    position: fixed;
     right: 0;
     top: $__c-page-sidebar-second-top-distance;
     width: $__c-page-sidebar-second-width-normal;
